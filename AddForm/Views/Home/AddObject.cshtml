@@ -1,0 +1,32 @@
+﻿@model AddForm.Models.ViewModelStudent
+
+@{
+    ViewBag.Title = "AddObject";
+}
+
+<h2>AddObject</h2>
+
+
+@using (Html.BeginForm())
+{
+    <fieldset>
+        <legend>Student</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Name)
+        </div>
+
+        <div class="editor-field">
+            @Html.TextBoxFor(model => model.Name)
+        </div>
+
+        <div class="editor-label">
+            <div style="float: left">
+                @Html.CheckBoxFor(model => model.Fail)
+            </div>
+            @Html.LabelFor(model => model.Fail)
+        </div>
+
+        <input type="submit" value="create new student" />
+    </fieldset>
+}

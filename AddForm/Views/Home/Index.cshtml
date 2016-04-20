@@ -1,0 +1,16 @@
+﻿@model List<AddForm.Models.Student>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<div>
+    <ul>
+        @foreach (var student in Model)
+        {
+            <li>@student.Name</li>
+            <li>@student.Age</li>
+        }
+    </ul>
+</div>
